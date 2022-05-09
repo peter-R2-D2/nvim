@@ -16,3 +16,6 @@ map('n', '<C-p>', ':BufferPick<CR>', opts)
 -- Telescope mapping
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+
+-- Formatting Null-ls
+map('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>', opts)

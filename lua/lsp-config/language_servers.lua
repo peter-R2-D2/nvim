@@ -1,3 +1,9 @@
+local on_attach = function(client, bufnr)
+  vim.api.nvim_set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', {noremap = true})
+  vim.api.nvim_set_keymap('n', '<leader>vd', ':lua vim.lsp.buf.definition()<cr>', {noremap = true})
+
+end
+
 local lsp_installer = require('nvim-lsp-installer')
 
 lsp_installer.on_server_ready(function(server)
@@ -13,8 +19,7 @@ lsp_installer.on_server_ready(function(server)
           telemetry = {enable = false}
         }
       }
-
     }, opts)
   end
-  server:setup(opts)
+server:setup(opts)
 end)
