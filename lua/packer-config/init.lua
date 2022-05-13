@@ -39,4 +39,6 @@ return require'packer'.startup(function()
   use "lukas-reineke/indent-blankline.nvim"
   -- Coment line
   use "terrortylor/nvim-comment"
+  -- Colorizer
+  use 'norcalli/nvim-colorizer.lua'
 end)
