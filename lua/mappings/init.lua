@@ -19,3 +19,4 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 
 -- Formatting Null-ls
 map('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>', opts)
+map('n', 'F', ':lua vim.lsp.buf.formatting()<CR>', opts)
