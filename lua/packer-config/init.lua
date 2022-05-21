@@ -31,6 +31,8 @@ return require'packer'.startup(function()
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'windwp/nvim-autopairs'
+  -- COC
+  use {'neoclide/coc.nvim', branch = 'release'}
   -- Git
   use 'lewis6991/gitsigns.nvim'
   -- Null ls
