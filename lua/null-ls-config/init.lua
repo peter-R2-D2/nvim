@@ -25,5 +25,6 @@ null_ls.setup({
               augroup END
               ]])
     end
-  end
+  end,
+  debug=true
 })

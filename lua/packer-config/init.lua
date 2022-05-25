@@ -43,4 +43,6 @@ return require'packer'.startup(function()
   use "terrortylor/nvim-comment"
   -- Colorizer
   use 'norcalli/nvim-colorizer.lua'
+  -- Vue
+  use 'posva/vim-vue'
 end)

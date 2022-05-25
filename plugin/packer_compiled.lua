@@ -233,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arthur/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["vim-vue"] = {
+    loaded = true,
+    path = "/Users/macbook/.local/share/nvim/site/pack/packer/start/vim-vue",
+    url = "https://github.com/posva/vim-vue"
   }
 }
 
