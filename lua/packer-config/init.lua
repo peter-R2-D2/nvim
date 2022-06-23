@@ -6,6 +6,7 @@ return require'packer'.startup(function()
   use 'kyazdani42/nvim-web-devicons' -- Icons
   use 'rcarriga/nvim-notify' -- Notifications
   use 'nvim-lualine/lualine.nvim' -- Bar status down
+  use 'feline-nvim/feline.nvim' -- Bar status down new a test
   use 'romgrk/barbar.nvim' -- Bar buffers up
   -- Tresitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
