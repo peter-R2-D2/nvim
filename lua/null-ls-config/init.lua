@@ -1,30 +1,12 @@
-local null_ls = require('null-ls')
-local formatting = null_ls.builtins.formatting
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local status, null_ls = pcall(require, "null_ls")
+if (not status) then
+  return
+end
 
 null_ls.setup({
   sources = {
-    formatting.eslint,
-    formatting.djlint,
-    formatting.black,
-    formatting.gofmt,
-    formatting.shfmt,
-    formatting.clang_format,
-    formatting.cmake_format,
-    formatting.dart_format,
-    formatting.stylua,
-    formatting.isort,
-    formatting.codespell,
-  },
-  on_attach = function(client)
-    if client.server_capabilities.document_formatting then
-      vim.cmd([[
-              augroup LspFormatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> :lua vim.lsp.buf.format()
-              augroup END
-              ]])
-    end
-  end,
-  debug=true
+    null_ls.builtins.diagnostics.eslint_d.with({
+      diagnostics_format = '[eslint] #{m}\n(#{c})'
+    }),
+  }
 })

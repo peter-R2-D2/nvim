@@ -1,48 +1,16 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-    "lua",
-    "html",
-    "css",
-    "scss",
-    "javascript",
-    "typescript",
-    "vue",
-    "tsx",
-    "python",
-    "yaml"
-  },
+local status, ts = pcall(require, "nvim-treesitter.configs")
+if (not status) then
+  return
+end
 
-  sync_install = false,
-
+ts.setup {
   highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
+    enable = true
   },
-
-  refactor = {
-    highlight_definitions = {
-      enable = true,
-      clear_on_cursor_move = true,
-      highlight_current_scope = { enable = true },
-      smart_rename = {
-        enable = true,
-        keymaps = {
-          srart_rename = "grr",
-        },
-      },
-      navigation = {
-        enable = true,
-        keymaps = {
-          goto_definition = "gnd",
-          list_definitions = "gnD",
-          list_definitions_toc = "gO",
-          goto_next_usage = "<a-*>",
-          goto_previous_usage = "<a-#>",
-        },
-      },
-    }
+  indent = {
+    enable = true
   },
   autotag = {
-    enable = true,
+    enable = true
   }
 }
